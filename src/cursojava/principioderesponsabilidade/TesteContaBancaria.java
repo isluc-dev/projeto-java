@@ -19,7 +19,7 @@ public class TesteContaBancaria {
 		bancaria.DepositarDineheiro(1500);
 		System.out.println(bancaria);
 		
-		System.out.println("conta gorda!");
+		
 		
 		
 	}

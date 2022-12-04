@@ -6,7 +6,9 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import cursojava.calssesauxiliares.FuncaoAutenticacao;
 import cursojava.classes.Aluno;
+import cursojava.classes.Diretor;
 import cursojava.classes.Discplina;
 import cursojava.constantes.StatusAluno;
 
@@ -14,11 +16,48 @@ public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
 
+		
+		
+		//primeira  forma de fazer a autentiação que ecom interfaces
+	  //   Secretario secretario2 = new Secretario(); // trabalando com o objeto
+		/*secretario.setLogin(login);
+		secretario.setSenha(senha);*/
+		
+		
+		 //secretario.autenticar(login,senha) primeira forma de autenticar
+	     //new Secretario().autenticar(login,senha) segunda forma de autenticar
+		
+		 
+		/*segunda   forma de fazer a autenticção com interfaces
+		PermitirAcesso secretario = new Secretario(); */
+	
+		
+		 /* PermitirAcesso permitirAcesso = new Secretario(login,senha); terceira forma de fazer o autenticar
+		  permitirAcesso.autenticar()*/
+		
+		   
+		   
+		   /* quarta forma de fazer o autenticar
+		    *  PermitirAcesso permitirAcesso = new Secretario(login,senha);
+		    *  FuncaoAutenticacao autenticacao = new FuncaoAutenticacao();
+		    *  autenticacao.autenticarCursoJava(permitirAcesso) */
+		
+		
+		//=============================================================================================================
+		
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Insira a Senha");
+		
+		
+		/* se for true ira executar se nao vai da erro 
+		    *  : vou travar e libera so para quem realmente tiver o contrato 100% legitimo*/
+		   
 
-		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
-
+		 //  PermitirAcesso permitirAcesso = new Secretario(login,senha);
+		   
+		if ( new FuncaoAutenticacao(new Diretor(login,senha)).autenticar()) {
+			
+			
 			/* lista de alunos */
 			List<Aluno> alunos = new ArrayList<Aluno>();
 
@@ -86,7 +125,7 @@ public class PrimeiraClasseJava {
 			 * 
 			 * }
 			 * 
-			 * // vareendo lista de alunos que sobraram da lista for (Aluno aluno : alunos)
+			 * // varrendo lista de alunos que sobraram da lista for (Aluno aluno : alunos)
 			 * { System.out.println("Alunos que sobraram na lista");
 			 * System.out.println(aluno.getNome());
 			 * System.out.println("Suas Materias São:"); for(Discplina discplina :

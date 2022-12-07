@@ -88,7 +88,7 @@ public class PrimeiraClasseJava {
 					String nomeNota = JOptionPane.showInputDialog("nota " + pos);
 
 					discplina.setDiscplina(nomeDisciplina);
-					discplina.setNota(Double.valueOf(nomeNota));
+					//discplina.setNota(Double.valueOf(nomeNota));
 
 					aluno.getDisciplinas().add(discplina);
 

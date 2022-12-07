@@ -38,7 +38,7 @@ public class TesteClassesFilhas {
 					
 					Discplina disciplina = new Discplina();
 					disciplina.setDiscplina(discip);
-					disciplina.setNota(Double.valueOf(nota));
+					//disciplina.setNota(Double.valueOf(nota));
 					disciplinas.add(disciplina);
 					
 					
